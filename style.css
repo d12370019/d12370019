@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #FFF9E6;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 24px;
+    color: rgb(26, 41, 26);
+}
+
+header{
+    background-color: #e4ffe9;
+    width: 100%;
+}
+
+header{
+    padding: 20px 0;
+}
+
+footer{
+    font-size: 12px;
+    text-align: center;
+    color: rgb(41, 86, 41);
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav a{
+     margin: 0 14px;
+    text-decoration: none;
+    color: rgb(41, 86, 41);
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s, transform 0.2s;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: rgb(130, 165, 140);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: rgb(130, 165, 140);
+    transform: scale(1.1); /* 微放大 */
+}
+
+nav a:hover::after {
+    width: 100%; /* 底線展開 */
+}
+/* 手機 RWD */
+@media screen and (max-width: 400px){
+    .banner-btn a{
+        font-size: 16px;
+        padding: 12px 28px;
+    }
+
+    nav a{
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+/* 平板 RWD */
+@media screen and (max-width: 800px){
+    .container{
+        padding: 0 20px;
+    }
+}

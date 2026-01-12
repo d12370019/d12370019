@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            text-align: center;
+        }
+
+        img{
+            width: 600px;
+            transition: 0.2s;
+        }
+
+        #result{
+            font-size: 32px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        #petalBtn{
+            display: inline-block;
+            padding: 14px 36px;
+            font-size: 18px;
+            border-radius: 30px;
+            background-color: rgb(161, 190, 169);
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #petalBtn:hover{
+            background-color: rgb(130, 165, 140);
+            transform: scale(1.05);
+        }
+
+        .box{
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: rgb(223, 223, 223, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Bridal Bouquet</h2>
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="interactive.html">Interactive</a>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+</header>
+
+<div class="box">
+    <img id="flower" src="images/flower_hand_off.png" alt="flower">
+    <div id="result">Like</div>
+    <button id="petalBtn">Pick a Petal</button>
+</div>
+
+<script>
+const flower = document.getElementById("flower");
+const result = document.getElementById("result");
+const btn = document.getElementById("petalBtn");
+
+let isLike = true;
+
+btn.addEventListener("mousedown", () => {
+    flower.src = "images/flower_hand_on.png";
+});
+
+
+btn.addEventListener("mouseup", () => {
+    flower.src = "images/flower_hand_off.png";
+
+
+    if(isLike){
+        result.textContent = "Dislike";
+    }else{
+        result.textContent = "Like";
+    }
+    isLike = !isLike;
+
+    const r = Math.floor(Math.random()*66) + 150;
+    const g = Math.floor(Math.random()*56) + 200;
+    const b = Math.floor(Math.random()*56) + 200;
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+});
+</script>
+<hr>
+<footer>
+    ©2026 Angelia . Bridal Bouquet Portfolio
+</footer>
+
+</body>
+</html>

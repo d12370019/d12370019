@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        main{
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .about-text{
+            flex: 1 1 300px;
+        }
+
+        .about-text h3{
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .namecardtext{
+            position: absolute;
+            color: rgba(82, 215, 230, 0.516);
+            bottom: 50px;
+            font-size: 150px;
+            pointer-events: none;
+        }
+
+        .namecard{
+            width: 360px;
+            background-color: rgb(255, 244, 236);
+            padding: 56px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: rgb(84, 84, 84);
+            display: block;
+            flex: 1 1 360px;
+        }
+
+        .namecard:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgba(218, 232, 114, 0.648);
+        }
+
+        .circle, .circle2{
+            border-radius: 50%;
+            position: absolute;
+            transition: 0.5s;
+        }
+
+        .circle{
+            width: 120px;
+            height: 120px;
+            background-color: rgb(209, 238, 193);
+            right: -40px;
+            bottom: -40px;
+            opacity: 0.6;
+        }
+
+        .circle2{
+            width: 120px;
+            height: 120px;
+            background-color: rgb(255, 191, 208);
+            right: 415px;
+            top: -50px;
+            opacity: 0.3;
+        }
+
+        .namecard:hover .circle{
+            transform: scale(1.6);
+            opacity: 0.3;
+        }
+
+        .namecard:hover .circle2{
+            transform: scale(1.4);
+            opacity: 0.8;
+        }
+
+        .name{
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .job{
+            font-size: 14px;
+            color: rgb(109, 109, 109);
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 800px){
+            .namecard{
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Bridal Bouquet</h2>
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="interactive.html">Interactive</a>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="about-text">
+        <h3>About me</h3>
+        <p>Hello, I’m Angelia, a student from the Department of Multimedia Animation at Tainan University of Technology.
+        <br><br>
+        This portfolio showcases my bridal bouquet designs created for the floral design course.
+        <br><br>
+        My works focus on soft colors, elegant composition, and romantic atmosphere to express the beauty of wedding flowers.
+        </p>
+    </div>
+
+    <div class="namecardtext">TUT</div>
+
+    <a href="#" class="namecard">
+        <div class="name">Angelia</div>
+        <div class="job">Tainan University of Technology</div>
+        <p>d12370019@gm.tut.edu.tw</p>
+        <div class="circle"></div>
+        <div class="circle2"></div>
+    </a>
+</main>
+<hr>
+<footer>
+    ©2026 Angelia . Bridal Bouquet Portfolio
+</footer>
+
+</body>
+</html>
